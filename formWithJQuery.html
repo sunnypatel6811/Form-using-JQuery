@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Form with JQuery</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- alert values -->     
+<!--<script type="text/javascript">
+    $(document).ready(function(){
+            alert($('#just').val());
+    })
+</script>-->
+
+<!--form submit query-->
+<script>
+    //$(document).ready(function(e){
+    //    $('#formSearch').on('submit',function(){
+    //        var la = $('input:empty');
+    //        //alert( $('#just').val() );
+    //        console.log(la);
+    //    });
+    //});
+    
+//    $(document).ready(function(e){
+//        console.log("Inputs with values");
+//    $('input').each(function(){
+//    var val = $(this).val();
+//    var valLength = $(this).val().length;
+//        //console.log(val);
+//        //your logic here
+//        
+//        if(valLength!= 0)
+//        {
+//            console.log(val);
+//        }
+//        else
+//        {
+//            console.log(val);
+//        }
+//});
+//    });
+</script>
+
+<script>
+    $(document).ready(function(e){
+        $('#formSearch').on('submit',function(){
+            console.log("Inputs with values");
+            $('input').each(function(){
+                var val = $(this).val();
+                var valLength = $(this).val().length;
+                
+                if(valLength!= 0)
+                {
+                    console.log($(this));
+                }
+                //else
+                //{
+                //    console.log(valLength);
+                //    console.log($(this));
+                //}
+            });
+            
+            
+            console.log("Inputs without values");
+            $('input').each(function(){
+                var val = $(this).val();
+                var valLength = $(this).val().length;
+                
+                if(valLength== 0)
+                {
+                    console.log($(this));
+                }
+            });
+            
+        });
+    });    
+</script>
+
+
+<style>
+    label
+    {
+        clear: both;
+        width: 7%;
+        float: left;
+    }
+    input
+    {
+        float: left;
+    }
+    
+    #submitPlease
+    {
+        clear: both;
+        
+    }
+</style>
+
+</head>
+
+<body>
+    
+    <div class="TestClass" id="TestID">
+        <form action="#" method="GET" id="formSearch">
+            <label>First Name</label>
+            <input type="text" id="first">
+            
+            <label>Last Name</label>
+            <input type="text" id="last">
+            
+            <label>Email</label>
+            <input type="email" id="email">
+            
+            <label>Username</label>
+            <input type="text" id="user">
+            
+            <label>Password</label>
+            <input type="password" id="pass">
+            
+            <input type="submit" id="submitPlease" value="submit">
+            <input type="reset" value="reset">
+        </form> 
+    </div>
+    
+    
+    
+</body>
+
+</html>

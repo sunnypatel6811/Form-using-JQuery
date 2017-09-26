@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+        
+    <title>Form with JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+    <!-- Get the id value of all input elements -->
+    <script>
+    // .each() function
+        $('document').ready(function(){
+            var inputValues = $('input');
+            $(inputValues).each(function() {
+                console.log(this.id);
+            });
+        });
+    </script>
+    
+    <!-- The total length of the input. Total, how many input elements are there? -->
+    <script>
+    // .each() function
+        $('document').ready(function(){
+            //var inputValues = $('input#first');
+            
+            console.log($('input').length);
+        });
+    </script>
+    
+    <!--<script>
+    // .each() function
+        console.log($.get("index.html"));
+    </script>-->
+        
+    <!-- When you will press the submit button, new anchor tag "a" will be added in unordered list, at very last. -->
+    <script>
+        $('document').ready(function(){
+            $('#submitPlease').click(function(){
+                $('ul').append('<li><a href="#"> Contact Us </a></li>');
+            });
+        });
+        
+    </script>
+
+    <style>
+        label
+        {
+            clear: both;
+            width: 7%;
+            float: left;
+        }
+        input
+        {
+            float: left;
+        }
+        
+        #submitPlease
+        {
+            clear: both;
+            
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="TestClass" id="TestID">
+        <form action="#" method="GET" id="formSearch">
+            <p>Name</p>
+            <label>First Name</label>
+            <input type="text" id="first" value="firstValue">
+            
+            <label>Last Name</label>
+            <input type="text" id="last">
+            
+            <label>Email</label>
+            <input type="email" id="email">
+            
+            <label>Date</label>
+            <input type="date" id="date">
+            
+            <label>Color</label>
+            <input type="color" id="color">
+            
+            <label>Username</label>
+            <input type="text" id="user">
+            
+            <label>Password</label>
+            <input type="password" id="pass">
+            
+            <input type="submit" id="submitPlease" value="submit">
+            <input type="reset" value="reset">
+        </form> 
+    </div>
+    
+    <ul style="clear: both;">
+        <li><a href="#"> Home </a></li>
+        <li><a href="#"> About Us </a></li>
+    </ul>
+</body>
+
+</html>
